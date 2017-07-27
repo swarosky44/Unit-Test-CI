@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/karma start karma.config.js",
-    "coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "coverage": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls.js"
   },
   "keywords": [
     "webpack",
