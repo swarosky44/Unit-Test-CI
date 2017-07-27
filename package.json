@@ -1,0 +1,34 @@
+{
+  "name": "unit-test-ci",
+  "version": "1.0.0",
+  "description": "webpack + karma + mocha + should + travis-ci repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/karma start karma.config.js"
+  },
+  "keywords": [
+    "webpack",
+    "karma",
+    "mocha",
+    "should",
+    "travis-ci"
+  ],
+  "author": "listen",
+  "license": "MIT",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-istanbul": "^4.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.0",
+    "karma": "^1.7.0",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.4",
+    "webpack": "^3.4.1"
+  }
+}
