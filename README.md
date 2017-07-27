@@ -1,5 +1,6 @@
 # Unit-Test-CI
 [![Build Status](https://travis-ci.org/swarosky44/Unit-Test-CI.svg?branch=master)](https://travis-ci.org/swarosky44/Unit-Test-CI)
+[![Coverage Status](https://coveralls.io/repos/github/swarosky44/Unit-Test-CI/badge.svg?branch=master)](https://coveralls.io/github/swarosky44/Unit-Test-CI?branch=master)
 
 ES6 + Babel + Webpack + Karma + Mocha + Chai + Travis CI 前端自动化测试 & 持续集成 Repo。
 

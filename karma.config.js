@@ -1,4 +1,6 @@
 const webpackConfig = require('./webpack.config.js');
+const path = require('path');
+
 module.exports = function(config) {
   config.set({
     frameworks: ['mocha', 'chai'],
@@ -6,9 +8,9 @@ module.exports = function(config) {
       'test/*.spec.js',
     ],
     preprocessors: {
-      'test/*.spec.js': ['webpack'],
+      'test/*.spec.js': ['webpack', 'sourcemap'],
     },
-    reporters: ['mocha', 'coverage'],
+    reporters: ['mocha', 'coverage-istanbul'],
     webpackServer: {
       noInfo: true,
     },
@@ -20,6 +22,7 @@ module.exports = function(config) {
       'karma-phantomjs-launcher',
       'karma-sourcemap-loader',
       'karma-mocha-reporter',
+      'karma-coverage-istanbul-reporter',
     ],
     webpack: webpackConfig,
     port: 9876,
@@ -27,11 +30,15 @@ module.exports = function(config) {
     autoWatch: true,
     browsers: ['PhantomJS'],
     singleRun: true,
-    coverageReporter: {
-      reporters: [
-        { type: 'lcov', dir: 'coverage', subdir: '.' },
-        { type: 'text-summary', dir: 'coverage', subdir: '.' }
-      ],
+    coverageIstanbulReporter: {
+      reports: ['html', 'lcovonly', 'text-summary'],
+      dir: path.resolve(__dirname, 'coverage'),
+      fixWebpackSourcePath: true,
+      'report-config': {
+        html: {
+          subdir: 'html',
+        },
+      },
     },
   });
 };
