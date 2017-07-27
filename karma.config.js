@@ -26,7 +26,7 @@ module.exports = function(config) {
     colors: true,
     autoWatch: true,
     browsers: ['PhantomJS'],
-    singleRun: false,
+    singleRun: true,
     coverageReporter: {
       reporters: [
         { type: 'lcov', dir: 'coverage', subdir: '.' },
